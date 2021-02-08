@@ -1,0 +1,43 @@
+<ion-header [translucent]="true" class="barra">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header" slot="end">
+      <div *ngIf="dato">
+        Info {{dato.name}}
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="dato">
+    <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img src="{{dato.image}}" alt="" class="image">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+      <ion-card-header>
+        <ion-card-subtitle>{{dato.created}}</ion-card-subtitle>
+        <ion-card-title>{{dato.name}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Especie: {{dato.species}}
+        <br>
+        <br>
+        Estado: {{dato.status}}
+        <br>
+        <br>
+        Episodios: <br> {{dato.episode}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

@@ -1,0 +1,82 @@
+<ion-header [translucent]="true" class="barra">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="header" slot="end">
+      Rick and Morty
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <!-- BARRA LATERAL -->
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Opciones</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/users">
+          <ion-icon name="people-outline" slot="start"> </ion-icon>
+          <ion-label>
+            Personajes
+          </ion-label>  
+        </ion-item>
+        <ion-item routerLink="/locations">
+          <ion-icon name="location-outline" slot="start"></ion-icon>
+          <ion-label>
+            Ubicaciones
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/episodies">
+          <ion-icon name="albums-outline" slot="start"></ion-icon>
+          <ion-label>
+            Episodios
+          </ion-label>
+        </ion-item>
+        <ion-item routerLink="/online">
+          <ion-icon name="tv-outline" slot="start"></ion-icon>
+          <ion-label>
+            Ver Serie Gratis
+          </ion-label>  
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- CONTENIDO DE LA PAGINA PRINCIPAL -->
+
+  <ion-card>
+    <img src="../../assets/image/image.jpg" alt="">
+    <ion-card-header>
+      <ion-card-subtitle>Serie</ion-card-subtitle>
+      <ion-card-title>Rick and Morty</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <span class="texto-principal">La serie sigue las desventuras de un científico, Rick, y su fácilmente influenciable nieto, Morty, quienes pasan el
+      tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.</span>
+      Es una serie de televisión estadounidense de animación para adultos creada por Justin Roiland y Dan Harmon en 2013 para
+      Adult Swim.
+      <p>
+        Rick Sánchez es un ejemplo del típico "científico loco". Es un genio, pero es irresponsable, alcohólico, egoísta, un
+        poco depresivo y con poca cordura. Rick por diferentes razones termina mudándose a la casa de su hija Beth y en ese
+        momento se encuentra con su nieto Morty; un chico de 14 años de edad, tímido y no muy listo. Al juntarse con su nieto,
+        Rick y Morty viven una variedad de aventuras a lo largo del Cosmos y Universos paralelos. Y es mediante tantas vivencias
+        y reflexiones que Rick busca que su nieto Morty no acabe como su padre, Jerry, un hombre muy poco exitoso que a pesar de
+        tener buenas intenciones resulta ser bastante inútil en muchas ocasiones y depende mucho de su esposa, Beth, hija de
+        Rick.
+        
+        A pesar de estar muy apegados, Rick y su nieto experimentan momentos en los que Summer, hermana de Morty, se une en
+        ocasiones a las pintorescas aventuras provocadas por Rick.
+      </p>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-content>
+

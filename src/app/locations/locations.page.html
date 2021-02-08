@@ -1,0 +1,26 @@
+<ion-header [translucent]="true" class="barra">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="header" slot="end">
+        Ubicaciones
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let l of locations">
+    <ion-card-header>
+      <ion-card-subtitle>{{l.created}}</ion-card-subtitle>
+      <ion-card-title>{{l.name}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Tipo: {{l.type}}
+      <br><br>
+      Visitas: <br>
+      {{l.residents}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
